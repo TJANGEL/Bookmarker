@@ -16,14 +16,6 @@ function saveBookmark(e){
     url: siteUrl
   }
 
-  /*
-    // Local Storage Test
-    localStorage.setItem('test', 'Hello World');
-    console.log(localStorage.getItem('test'));
-    localStorage.removeItem('test');
-    console.log(localStorage.getItem('test'));
-  */
-
   // Test if bookmarks is null
   if(localStorage.getItem('bookmarks') === null){
     // Init array
@@ -74,7 +66,7 @@ function fetchBookmarks(){
   // Get bookmarks from localStorage
   var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
   // Get output id
-  var bookmarksResults = document.getElementById('bookmarksResults');
+  var bookmarksResults = document.getElementById('bookmarkResults');
 
   // Build output
   bookmarksResults.innerHTML = '';
